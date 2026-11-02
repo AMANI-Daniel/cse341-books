@@ -10,7 +10,7 @@ if (!PORT) {
 //connects to MongoDB before it starts listening for requests
 const startServer = async () => {
     try {
-        await connectToDb();
+        await connectToDb();  
         app.listen(PORT, () => {
             console.log(`Server listening at 127.0.0.1:${PORT}`);
         });
