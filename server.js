@@ -7,7 +7,7 @@ if (!PORT) {
     throw new Error('PORT is not defined. Make sure your local npm scripts reference the .env file with --env-file=.env, or define PORT in your hosted environment settings.');
 }
 
-
+//connects to MongoDB before it starts listening for requests
 const startServer = async () => {
     try {
         await connectToDb();
