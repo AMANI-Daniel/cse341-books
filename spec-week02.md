@@ -117,7 +117,7 @@ Required author field:
 
 -`id`: string and must be unique (required)
 -`names`: string (required)
--`birthYear`: string valid four digit (required)
+-`birthYear`: Valid number wiht four digits (required)
 ### Relationship with books
 Each author must have unique id that will be referenced by books through authorId.
 When deleting the author, the API should reject with a `400` status code if the `id` is referenced by at least one book.
@@ -152,7 +152,7 @@ Request body:
     {
       "id": "a1",
       "names": "AMANI Daniel",
-      "birthYear": "2005"
+      "birthYear": 2005
     }
 
 Success:
@@ -171,7 +171,7 @@ Request body:
 
     {
         "names": "Uwabagira Rose",
-     	"birthYear": "2006"
+     	"birthYear": 2006
     }
 
 Success:
@@ -374,7 +374,7 @@ Required author field:
 
 -`id`: string and must be unique (required)
 -`names`: string (required)
--`birthYear`: string valid four digit (required)
+-`birthYear`: Valid number with four digits (required)
 ### Relationship with books
 Each author must have unique id that will be referenced by books through authorId.
 When deleting the author, the API should reject with a `400` status code if the `id` is referenced by at least one book.
@@ -390,7 +390,7 @@ Success:
   {
     "id": "a1",
     "names": "AMANI Daniel",
-    "birthYear": "2005"
+    "birthYear": 2005
   }
 ]
 Errors:
@@ -405,7 +405,7 @@ Success:
   {
     "id": "a1",
     "names": "AMANI Daniel",
-    "birthYear": "2005"
+    "birthYear": 2005
   }
 Errors:
 - `404` if no author exists with that id
@@ -424,7 +424,7 @@ Request body:
     {
       "id": "a1",
       "names": "AMANI Daniel",
-      "birthYear": "2005"
+      "birthYear": 2005
     }
 
 Success:
@@ -433,7 +433,7 @@ Success:
     {
     "id": "a1",
     "names": "AMANI Daniel",
-    "birthYear": "2005"
+    "birthYear": 2005
   }
 Errors:
 - `400` if a required field is missing
@@ -447,7 +447,7 @@ Request body:
 
     {
       "names": "Uwabagira Rose",
-     	"birthYear": "2006"
+     	"birthYear": 2006
     }
 
 Success:
@@ -456,7 +456,7 @@ Success:
    {
       "id": "a1",
       "names": "Uwabagira Rose",
-     	"birthYear": "2006"
+     	"birthYear": 2006
     }
 Errors:
 - `400` if a required field is missing

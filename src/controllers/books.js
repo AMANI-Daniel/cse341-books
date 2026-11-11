@@ -9,7 +9,7 @@ const getBooksHandler = async (req, res) => {
         return res.status(200).json(books);
     } catch (error) {
         console.error('GET /books failed:', error.message);
-        return res.status(500).json({ message: 'Internal server error' });
+        return res.status(500).json({ message: 'Unable to retrieve books' });
     }
 };
 //Handler for GET /books/:id
@@ -26,7 +26,7 @@ const getBookByIdHandler = async (req, res) => {
         return res.status(200).json(book);
     } catch (error) {
         console.error("GET /books/:id failed: ", error.message);
-        return res.status(500).json({message: 'Internal server error' });
+        return res.status(500).json({message: 'Unable to retrieve book' });
     }
  }
 
